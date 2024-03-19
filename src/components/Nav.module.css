@@ -1,0 +1,24 @@
+.navBar{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+     justify-content: space-around;
+
+}
+.navBarChiled{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+   
+
+}
+
+.navBarChiled> a{
+    color: white;
+    text-decoration: none;
+    margin-top: 0px;
+}
