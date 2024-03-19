@@ -1,12 +1,14 @@
 import React from "react"
 import Button from "../Ui/Button";
-import Classes from "../Card/card.module.css"
+import Classes from "../Card/card.module.css";
+
+
 
 const Card = (props) =>{
     return(
         <React.Fragment>
              <div className={Classes.card}>
-                  <div className={Classes.title}>{props.title}</div>
+                  <h4 className={Classes.title}>{props.title}</h4>
                    <div className={Classes.pic}>
                      <img src={props.url} alt="img Loading"></img>
                    </div>

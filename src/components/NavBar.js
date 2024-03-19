@@ -1,7 +1,7 @@
 import React from "react";
 import Classes from "../components/Nav.module.css"
 import Cart from "./Cart/Cart";
-const NavBar = () =>{
+const NavBar = ( props) =>{
     return(
         < React.Fragment>
             <div className={Classes.navBar}>
@@ -11,7 +11,7 @@ const NavBar = () =>{
                                <a href="">Store</a>
                                <a href="">About</a>
                                  
-                       <Cart></Cart>
+                       <Cart onClick={props.onClick}></Cart>
                         </nav>
                   
                      

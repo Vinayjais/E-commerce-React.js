@@ -1,8 +1,9 @@
-import React from "react"
+import React,{useState} from "react"
 import './App.css';
 import NavBar from "./components/NavBar";
 import Cover from "./components/cover/Cover";
 import MusicStore from "./components/Musics/store";
+import CartItems from "./components/Cart/cartItems";
 
 
 const productsArr = [
@@ -54,10 +55,21 @@ const productsArr = [
 
 function App() {
 
+     const [showCart , setShowCart] = useState(false)
+
+     function cartHandler(){
+        setShowCart(false)
+     }
+     function opneCart(){
+      setShowCart(true)
+     }
+
   return (
     
-    <>
-      <NavBar></NavBar>
+    <>  
+
+      { showCart && <CartItems onClick ={cartHandler}></CartItems>}
+      <NavBar onClick={opneCart}></NavBar>
       <Cover></Cover>
       <MusicStore title="Musics" products={productsArr}></MusicStore>
       <MusicStore title="Albums" products={productsArr}></MusicStore>
