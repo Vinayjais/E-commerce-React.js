@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Cover from "./components/cover/Cover";
 import MusicStore from "./components/Musics/store";
 import CartItems from "./components/Cart/cartItems";
+import CartProvider from "./components/Store/Cart-Provider";
 
 
 const productsArr = [
@@ -67,14 +68,16 @@ function App() {
   return (
     
     <>  
-
-      { showCart && <CartItems onClick ={cartHandler}></CartItems>}
+     <CartProvider>
+                    { showCart && <CartItems onClick ={cartHandler}></CartItems>}
       <NavBar onClick={opneCart}></NavBar>
       <Cover></Cover>
       <MusicStore title="Musics" products={productsArr}></MusicStore>
       <MusicStore title="Albums" products={productsArr}></MusicStore>
 
       
+      </CartProvider>
+
     </>
   );
 }

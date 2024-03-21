@@ -7,9 +7,9 @@ const NavBar = ( props) =>{
             <div className={Classes.navBar}>
     
                        <nav className={Classes.navBarChiled} >
-                               <a href="">Home</a>
-                               <a href="">Store</a>
-                               <a href="">About</a>
+                               <a >Home</a>
+                               <a>Store</a>
+                               <a>About</a>
                                  
                        <Cart onClick={props.onClick}></Cart>
                         </nav>
