@@ -5,6 +5,8 @@ import Cover from "./components/cover/Cover";
 import MusicStore from "./components/Musics/store";
 import CartItems from "./components/Cart/cartItems";
 import CartProvider from "./components/Store/Cart-Provider";
+import {Route,Routes}  from "react-router-dom"
+import About from "./components/About/About";
 
 
 const productsArr = [
@@ -72,9 +74,13 @@ function App() {
                     { showCart && <CartItems onClick ={cartHandler}></CartItems>}
       <NavBar onClick={opneCart}></NavBar>
       <Cover></Cover>
-      <MusicStore title="Musics" products={productsArr}></MusicStore>
-      <MusicStore title="Albums" products={productsArr}></MusicStore>
-
+       <Routes>
+        <Route path="/"></Route>
+        <Route path="/store" element={ <MusicStore title="Musics" products={productsArr}/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+       </Routes>
+     
+     
       
       </CartProvider>
 
