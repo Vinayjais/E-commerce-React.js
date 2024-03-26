@@ -3,11 +3,28 @@
     height: 25vh;
     background-color: rgb(190, 190, 190);
     color: black;
-    margin-top: -20px;
+    margin-top: -65px;
 
    
 }
 
-.heading{
-    font-size: 30px;
+
+.Cover> h4{
+
+    position:relative;
+    font-size: 50px;
+    left: 42%;
+    color: rgb(3, 199, 199);
+
+}
+@media (max-width:  600px) {
+    .Cover> h4{
+
+        position:relative;
+        font-size: 50px;
+        left: 25%;
+        color: rgb(255, 255, 255);
+      
+    
+    }
 }

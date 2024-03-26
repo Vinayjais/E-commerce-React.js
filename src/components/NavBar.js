@@ -1,7 +1,7 @@
 import React from "react";
 import Classes from "../components/Nav.module.css"
 import Cart from "./Cart/Cart";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 const NavBar = ( props) =>{
 
          
@@ -10,9 +10,9 @@ const NavBar = ( props) =>{
             <div className={Classes.navBar}>
     
                        <nav className={Classes.navBarChiled} >
-                               
-                               <Link to="/store">Store</Link>   
-                               <Link to="/about">About</Link>
+                               <NavLink to="/">Home</NavLink>
+                               <NavLink to="/store">Store</NavLink>   
+                               <NavLink to="/about">About</NavLink>
                                  
                        <Cart onClick={props.onClick}></Cart>
                         </nav>

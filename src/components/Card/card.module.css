@@ -29,3 +29,39 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.homeCard{
+  background-color: aliceblue;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 0 4px 0 rgb(22, 22, 22);
+  padding: 10px;
+   min-width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+@media (max-width:500px) {
+  .homeCard{
+    background-color: rgb(168, 193, 214);
+    border: 1.5px solid black;
+    border-radius: 5px;
+     max-width: 25%;
+    display: flex;
+   
+    margin-top: 8px;
+    position: relative;
+    left: -10%;
+  }
+ 
+}
+.homeItems{
+   display: flex;
+   flex-direction: column;
+   max-width: 50rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
+   position: relative;
+   left: 20%
+}

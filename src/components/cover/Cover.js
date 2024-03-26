@@ -6,7 +6,7 @@ const Cover = () =>{
         <>
 
             <div className={Classes.Cover}>
-                <center><h4>The Hunks</h4></center>
+                <h4>The Hunks</h4>
 
             </div>
         </>

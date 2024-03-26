@@ -7,6 +7,8 @@ import CartItems from "./components/Cart/cartItems";
 import CartProvider from "./components/Store/Cart-Provider";
 import {Route,Routes}  from "react-router-dom"
 import About from "./components/About/About";
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 
 
 const productsArr = [
@@ -75,12 +77,12 @@ function App() {
       <NavBar onClick={opneCart}></NavBar>
       <Cover></Cover>
        <Routes>
-        <Route path="/"></Route>
+        <Route path="/" element={<Home/>}></Route>
         <Route path="/store" element={ <MusicStore title="Musics" products={productsArr}/>}></Route>
         <Route path="/about" element={<About/>}></Route>
        </Routes>
      
-     
+       <Footer></Footer>
       
       </CartProvider>
 
