@@ -55,8 +55,8 @@ const CartItems = (props) =>{
          return (
              <li className={Classes.li}><span>{item.name}</span>
              <span>{item.Price} X {item.Quantity}</span> 
-               {/* <div> { item.quantity > 0 ? <Button onClick={removeItem} name="--"></Button> : ''}
-             <Button  onClick={addItem} name="+"></Button></div> */}
+               <div> { 1 > 0 ? <Button name="--"></Button> : ''}
+             <Button   name="+"></Button></div>
              </li>
          )
       })

@@ -1,0 +1,21 @@
+.formdiv{
+    background-color: aliceblue;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 36%;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 25vw;
+
+}
+
+.form> input, button{
+    width: 100%;
+    margin-bottom: 5px;
+   
+}

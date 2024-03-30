@@ -2,6 +2,7 @@ import React,{ useContext} from "react"
 import Button from "../Ui/Button";
 import Classes from "../Card/card.module.css";
  import CartContext from "../Store/Cart_Context";
+ import {NavLink} from "react-router-dom"
 
 
 
@@ -13,6 +14,7 @@ const Card = (props) =>{
               
 
           const item={
+                 id: props.id,
                 name: props.title,
                  Price: props.price,
                  Quantity: 1
@@ -21,8 +23,11 @@ const Card = (props) =>{
          }
     return(
         <React.Fragment>
-             <div className={Classes.card}>
+             <div key={props.id} className={Classes.card}>
+               <NavLink to={`/product-detailes/${props.id}`}>
                   <h4 className={Classes.title}>{props.title}</h4>
+
+               </NavLink>
                    <div className={Classes.pic}>
                      <img src={props.url} alt="img Loading"></img>
                    </div>

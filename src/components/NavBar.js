@@ -13,6 +13,7 @@ const NavBar = ( props) =>{
                                <NavLink to="/">Home</NavLink>
                                <NavLink to="/store">Store</NavLink>   
                                <NavLink to="/about">About</NavLink>
+                               <NavLink to="/contact-us">Contact Us</NavLink>
                                  
                        <Cart onClick={props.onClick}></Cart>
                         </nav>

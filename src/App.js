@@ -9,12 +9,14 @@ import {Route,Routes}  from "react-router-dom"
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
+import ContactUs from "./components/Contact-us/ContactUs";
+import ProductDetailes from "./components/Musics/productDetailes";
 
 
 const productsArr = [
 
   {
-  
+   id: 1,
   title: 'Colors',
   
   price: 100,
@@ -24,7 +26,7 @@ const productsArr = [
   },
   
   {
-  
+   id:2,
   title: 'Black and white Colors',
   
   price: 50,
@@ -34,7 +36,7 @@ const productsArr = [
   },
   
   {
-  
+   id:3,
   title: 'Yellow and Black Colors',
   
   price: 70,
@@ -44,7 +46,7 @@ const productsArr = [
   },
   
   {
-  
+   id:4,
   title: 'Blue Color',
   
   price: 100,
@@ -77,9 +79,15 @@ function App() {
       <NavBar onClick={opneCart}></NavBar>
       <Cover></Cover>
        <Routes>
+         
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/store" element={ <MusicStore title="Musics" products={productsArr}/>}></Route>
+        <Route path="/store" element={ <MusicStore title="Musics" products={productsArr}/>}>
+
+        </Route>
         <Route path="/about" element={<About/>}></Route>
+        <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
+        <Route path="/product-detailes/:id" element={<ProductDetailes products={productsArr}></ProductDetailes>}></Route>
+
        </Routes>
      
        <Footer></Footer>
